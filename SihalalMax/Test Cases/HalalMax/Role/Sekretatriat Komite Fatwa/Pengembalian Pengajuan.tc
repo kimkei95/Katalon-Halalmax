@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TestLogin</name>
+   <name>Pengembalian Pengajuan</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>9901e861-1f11-458d-a3e1-7d359b3ce6d1</testCaseGuid>
+   <testCaseGuid>1d792341-6f55-4c57-bb34-cee2cad99993</testCaseGuid>
 </TestCaseEntity>
