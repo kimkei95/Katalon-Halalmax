@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TestLogin</name>
+   <name>Batal Tetapkan Sertifikasi</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>a56a7c74-8aa0-4f6a-a94a-67fe5675a551</testCaseGuid>
+   <testCaseGuid>31de3218-ae30-4461-b994-e218eaa94dc3</testCaseGuid>
 </TestCaseEntity>
