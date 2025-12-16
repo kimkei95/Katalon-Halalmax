@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>DalamProsesVerifikasiPendampingHalal</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>f4180997-ebdc-4239-9be8-8df64ef61fe5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[(text() = 'Dalam Proses Verifikasi Pendamping Halal' or . = 'Dalam Proses Verifikasi Pendamping Halal')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

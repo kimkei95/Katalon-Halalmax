@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>PenerbitanSertifikasiOlehKF</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>4a1108ad-7097-403f-beec-471f946681fb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <value>//p[contains(normalize-space(.), 'Penerbitan Sertifikasi oleh Komite Fatwa')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

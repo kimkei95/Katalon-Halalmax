@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>JenisPermohonan</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>0446e7f3-b092-40f9-85e4-9ad99031a51f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//div[(text() = 'Jenis Permohonan' or . = 'Jenis Permohonan')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

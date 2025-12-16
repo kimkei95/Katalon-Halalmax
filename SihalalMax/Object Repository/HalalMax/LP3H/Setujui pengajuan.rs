@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>Setujui pengajuan</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>c68c68db-81b2-4e98-a76b-5e7a58c9f809</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//button[.//p[normalize-space(text())='Setujui']]&#xd;
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

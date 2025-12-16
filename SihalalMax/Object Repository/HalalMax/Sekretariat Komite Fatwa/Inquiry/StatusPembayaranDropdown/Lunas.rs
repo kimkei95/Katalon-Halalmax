@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>Lunas</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>5200fbcb-41ad-4a56-9530-d6c9423cec1c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[(text() = 'Lunas' or . = 'Lunas')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

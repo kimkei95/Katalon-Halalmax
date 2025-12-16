@@ -189,3 +189,23 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('HalalMax/PendampingHalal/TombolGunakan'))
 
+WebUI.delay(3)
+
+WebUI.click(findTestObject('Halalmax/PendampingHalal/KirimVerval'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('Halalmax/PendampingHalal/CheckboxModal1'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('Halalmax/PendampingHalal/CheckboxModal2'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('Halalmax/PendampingHalal/KirimPengajuan'))
+
+WebUI.delay(5)
+
+WebUI.closeBrowser()
+

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>MenungguValidasiLembagaHalal</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>bb24aa50-4be9-480d-9dee-b7c0aae3aa2a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[(text() = 'Menunggu Validasi Lembaga Halal' or . = 'Menunggu Validasi Lembaga Halal')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
