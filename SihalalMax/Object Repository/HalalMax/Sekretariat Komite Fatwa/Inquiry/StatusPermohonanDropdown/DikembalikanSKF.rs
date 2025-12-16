@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LihatPengajuan</name>
+   <name>DikembalikanSKF</name>
    <tag></tag>
-   <elementGuidId>58251c05-f341-4b71-975c-b252d3a8de0b</elementGuidId>
+   <elementGuidId>287f62d4-8b70-4cc4-8d95-444db19a179c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[td[2]/p[normalize-space()='3486']]//h1[normalize-space()='Lihat']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[(text() = 'Dikembalikan Sekertariat Komite Fatwa' or . = 'Dikembalikan Sekertariat Komite Fatwa')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

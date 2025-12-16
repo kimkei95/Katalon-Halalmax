@@ -6,12 +6,16 @@
    <UUID>62202365-ccd7-4875-8e20-87c609f273b1</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
    <createdVersion>10.3.1</createdVersion>
-   <freeLicense>false</freeLicense>
+   <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>ENTERPRISE</modifiedEdition>
-   <modifiedVersion>10.4.2</modifiedVersion>
+   <modifiedVersion>10.3.1</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+<<<<<<< HEAD
    <projectFileLocation>C:\Katalon-Halalmax\SihalalMax\SihalalMax.prj</projectFileLocation>
+=======
+   <projectFileLocation>C:\Users\akmal\Katalon-Halalmax\SihalalMax\SihalalMax.prj</projectFileLocation>
+>>>>>>> a1966f7 (Added script inquiry for SKF and added LP3H Role script)
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
