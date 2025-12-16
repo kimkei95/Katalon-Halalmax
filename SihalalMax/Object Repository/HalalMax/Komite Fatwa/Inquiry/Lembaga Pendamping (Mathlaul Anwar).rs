@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Lembaga Pendamping (Mathlaul Anwar)</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>64c49585-d2a8-46e1-84a5-68e5f7ff04ca</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>//*[(text() = 'Mathla`ul Anwar' or . = 'Mathla`ul Anwar')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Mathla`ul Anwar</value>
+      <webElementGuid>b71ec8dc-d304-4507-bec6-662538ebec91</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Navbar Inquiry</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>9dc2e65c-ceec-4324-ba4a-480481d84a75</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>//*[(text() = 'Inquiry' or . = 'Inquiry')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Inquiry</value>
+      <webElementGuid>9d02416a-b7b1-4548-a1b4-84bfbc9ed4f3</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

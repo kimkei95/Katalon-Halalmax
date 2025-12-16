@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Jenis Pendaftaran(Baru)</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>8b9d8305-b285-4cca-ab20-a277cd667c80</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Baru' or . = 'Baru')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Baru</value>
+      <webElementGuid>5422fa67-ced4-428d-bcc4-23e439581354</webElementGuid>
    </webElementProperties>
 </WebElementEntity>
