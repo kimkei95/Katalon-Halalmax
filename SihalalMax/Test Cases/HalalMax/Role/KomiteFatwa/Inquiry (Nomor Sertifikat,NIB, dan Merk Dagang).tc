@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Inquiry (Nomor Sertifikat,NIB, dan Merk Dagang)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d634b7a0-131c-4b61-8b9f-64e4d37dad9f</testCaseGuid>
+</TestCaseEntity>

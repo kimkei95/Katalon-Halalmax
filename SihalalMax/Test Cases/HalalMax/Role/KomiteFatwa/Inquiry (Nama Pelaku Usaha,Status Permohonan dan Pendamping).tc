@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Inquiry (Nama Pelaku Usaha,Status Permohonan dan Pendamping)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>25064a09-f811-46ff-82d7-335517203fa4</testCaseGuid>
+</TestCaseEntity>

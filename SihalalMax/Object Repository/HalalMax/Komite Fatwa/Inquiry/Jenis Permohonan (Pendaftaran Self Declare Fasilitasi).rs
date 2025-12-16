@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Jenis Permohonan (Pendaftaran Self Declare Fasilitasi)</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>abe0a298-917b-44fa-8ed8-4d738f1d5a70</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Pendaftaran Self Declare Fasilitasi' or . = 'Pendaftaran Self Declare Fasilitasi')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Pendaftaran Self Declare Fasilitasi</value>
+      <webElementGuid>b59db64b-6685-4fdc-be85-652e0218cac5</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

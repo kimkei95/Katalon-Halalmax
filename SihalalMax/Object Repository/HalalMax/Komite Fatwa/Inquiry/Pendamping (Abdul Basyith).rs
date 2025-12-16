@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Pendamping (Abdul Basyith)</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>f80925c6-d955-4486-bfa9-2d4b7a2d33b6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
+         <value>//*[(text() = 'Abdul Basyith' or . = 'Abdul Basyith')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +18,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Abdul Basyith</value>
+      <webElementGuid>40d800e7-72ef-4065-83a4-06704867f324</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

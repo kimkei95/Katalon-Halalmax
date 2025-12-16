@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Inquiry (Nomor Pendaftaran, Jenis Permohonan dan Status Pembayaran</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5fdd1ebb-cab7-4f95-9c14-a3fc3f34523c</testCaseGuid>
+</TestCaseEntity>

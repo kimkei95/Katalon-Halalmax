@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Inquiry (ID, Jenis Pendaftartaran dan Lembaga Pendamping)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7c7ec89d-04e1-4c5e-ad28-3e504fe25729</testCaseGuid>
+</TestCaseEntity>

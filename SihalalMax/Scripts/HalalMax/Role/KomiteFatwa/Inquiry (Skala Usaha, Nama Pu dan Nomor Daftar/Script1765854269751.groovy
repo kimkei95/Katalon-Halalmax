@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.annotation.Keyword as Keyword
 
 WebUI.openBrowser('')
 
@@ -49,27 +50,47 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('Halalmax/Sekretariat Komite Fatwa/Button Popup Mengerti'))
 
-WebUI.delay(5)
-
-WebUI.click(findTestObject('HalalMax/Komite Fatwa/Pilihan Urutan (Terbaru)'))
-
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Halalmax/Sekretariat Komite Fatwa/Button Lihat'))
-
-WebUI.delay(5)
-
-WebUI.click(findTestObject('Halalmax/Komite Fatwa/Button Lihat Selengkapnya'))
-
-WebUI.delay(3)
-
-WebUI.click(findTestObject('Halalmax/Komite Fatwa/Tetapkan Sertifikasi/Button Tetapkan Sertifikasi'))
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Navbar Inquiry'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Halalmax/Komite Fatwa/Tetapkan Sertifikasi/Button (YA) Tetapkan Sertifikasi'))
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Dropdown Skala Usaha'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Skala Usaha (Kecil)'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Field Nama Pelaku Usaha'))
+
+WebUI.delay(2)
+
+WebUI.setText(findTestObject('HalalMax/Komite Fatwa/Inquiry/Field Nama Pelaku Usaha'), 'MIRA SETIAWAN')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Field Nomor Pendaftaran'))
+
+WebUI.delay(3)
+
+WebUI.setText(findTestObject('HalalMax/Komite Fatwa/Inquiry/Field Nomor Pendaftaran'), 'SH2025-1-623426')
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Inquiry(Klik Lihat)'))
+
+WebUI.delay(2)
+
+WebUI.scrollToElement(findTestObject('HalalMax/Komite Fatwa/Inquiry/Element Untuk Scroll Page'), 5)
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/Komite Fatwa/Inquiry/Button Lihat (Inquiry)'))
 
 WebUI.delay(5)
 
-WebUI.closeBrowser(FailureHandling.STOP_ON_FAILURE)
+WebUI.closeBrowser()
 

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button Lihat Selengkapnya</name>
+   <name>Status Permohonan (Dikembalikan Pendamping)</name>
    <tag></tag>
-   <elementGuidId>c92d842f-3d56-4df2-840e-37fbf2a827b7</elementGuidId>
+   <elementGuidId>8f2397a5-36c7-4b17-9a76-1f2069baed21</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'Lihat Selengkapnya' or . = 'Lihat Selengkapnya')]</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Dikembalikan Pendamping' or . = 'Dikembalikan Pendamping')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Lihat Selengkapnya</value>
-      <webElementGuid>c61f209f-bc8c-4e6d-805a-26254f45bb40</webElementGuid>
+      <value>Dikembalikan Pendamping</value>
+      <webElementGuid>cd5250bb-395d-4472-8a30-b25ea3862aeb</webElementGuid>
    </webElementProperties>
 </WebElementEntity>
