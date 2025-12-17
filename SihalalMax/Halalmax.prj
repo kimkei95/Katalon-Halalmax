@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>SihalalMax</name>
+   <name>Halalmax</name>
    <tag></tag>
-   <UUID>62202365-ccd7-4875-8e20-87c609f273b1</UUID>
+   <UUID>b0736765-0422-4be3-89c7-108a68bb0887</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
-   <createdVersion>10.3.1</createdVersion>
-   <freeLicense>true</freeLicense>
+   <createdVersion>10.0.0</createdVersion>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>ENTERPRISE</modifiedEdition>
-   <modifiedVersion>10.3.1</modifiedVersion>
+   <modifiedVersion>10.0.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-<<<<<<< HEAD
-   <projectFileLocation>C:\Katalon-Halalmax\SihalalMax\SihalalMax.prj</projectFileLocation>
-=======
-   <projectFileLocation>C:\Users\akmal\Katalon-Halalmax\SihalalMax\SihalalMax.prj</projectFileLocation>
->>>>>>> a1966f7 (Added script inquiry for SKF and added LP3H Role script)
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
