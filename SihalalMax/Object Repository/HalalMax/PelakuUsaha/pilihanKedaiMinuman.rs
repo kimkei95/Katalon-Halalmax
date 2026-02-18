@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>pilihanKedaiMinuman</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>bca652d2-a54d-461e-80e7-1cb6e6380034</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[(text() = 'Kedai Minuman' or . = 'Kedai Minuman')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

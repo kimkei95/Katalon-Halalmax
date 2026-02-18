@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>SidebarData</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>3626e16b-2ed9-4a28-ad84-e8630298c44e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//div[.//span[normalize-space(text())='Data']])[7]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

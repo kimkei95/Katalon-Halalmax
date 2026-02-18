@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>PilihJenisProduk</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>f5f36c31-1c61-4c49-995a-5be5a10f4eea</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//div[contains(@class,'cursor-pointer')]//div[normalize-space()='Pilih....']/ancestor::div[@tabindex='0']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

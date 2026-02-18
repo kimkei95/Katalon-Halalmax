@@ -20,7 +20,6 @@ import org.openqa.selenium.WebElement
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil
 import java.util.Arrays
-import java.util.Random
 
 // --- Mulai Skenario ---
 // 1. Tentukan Test Object
@@ -76,7 +75,7 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/KlikDropdownKBLI'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/pilihanKedaiMinuman'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/KBLINonWarteg'))
 
 WebUI.delay(3)
 
@@ -88,13 +87,26 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/BtnKirim'))
 
 WebUI.delay(3)
 
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/NonWarteg/Berikutnya'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/NonWarteg/Selesai'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/NonWarteg/Ajukan'))
+
+WebUI.delay(5)
+
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/PilihJenisProduk'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/MemilihJenisProduk'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/NonWarteg/Produk Non Warteg'))
 
 WebUI.delay(3)
+
 // =========================
 // LIST PRODUK (DATA UJI)
 // =========================
@@ -121,7 +133,6 @@ def daftarFoto = [
 	]
 
 	Random random = new Random()
-
 // =========================
 // LOOP PRODUK
 // =========================
@@ -168,7 +179,7 @@ for (String namaProduk : daftarProduk) {
 	// =========================
 	// UPLOAD FOTO
 	// =========================
-	
+
 	String fotoRandom = daftarFoto[random.nextInt(daftarFoto.size())]
 	
 	KeywordUtil.logInfo("Upload foto: " + fotoRandom)
@@ -177,7 +188,6 @@ for (String namaProduk : daftarProduk) {
 		findTestObject('HalalMax/PelakuUsaha/Produk1/AddFotoProduk'),
 		fotoRandom
 	)
-	
 
 	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Icon-Buang'))
 
@@ -234,3 +244,81 @@ for (String namaProduk : daftarProduk) {
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/KirimPengajuan'))
 
 WebUI.delay(3)
+
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox1'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox2'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox3'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/KirimPengajuanIkrar'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/CariPendaming'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/KlikDropdownLokasiLP3H'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/PilihKabupaten'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/KlikDropdownPilihLP3H'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/PilihLp3h'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/PilihPendampingHalal'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/NamaPendamping'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/FieldKodeFasilitator'))
+
+WebUI.delay(3)
+
+WebUI.setText(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/FieldKodeFasilitator'), 'SEHATI26')
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/BtnKirim'))
+
+
+String currentUrl = WebUI.getUrl()
+println("Current URL: " + currentUrl)
+
+def matcher = (currentUrl =~ /sertifikasi\/(\d+)/)
+
+if (matcher.find()) {
+	String idPengajuan = matcher.group(1)
+	println("ID ditemukan: " + idPengajuan)
+	
+	// SIMPAN KE GLOBAL
+	GlobalVariable.idPengajuan = idPengajuan
+	
+	println("ID disimpan ke GlobalVariable: " + GlobalVariable.idPengajuan)
+	
+} else {
+	KeywordUtil.markFailed("ID tidak ditemukan di URL")
+}
+WebUI.delay(5)
+WebUI.closeBrowser()
+
+

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>Pilih Distribusi KFZULFA e2e</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>ff8fe93d-5691-41a2-a9d6-1471e522e1d0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <value>//p[normalize-space()='Fatwa.01']/parent::div&#xd;
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

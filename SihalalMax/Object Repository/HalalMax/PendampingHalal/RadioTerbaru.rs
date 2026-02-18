@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>RadioTerbaru</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>ec925b67-6d82-4c4b-af73-b8bf09c35922</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <value>//label[normalize-space()='Terbaru']/preceding-sibling::input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

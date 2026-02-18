@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Informasi Sertifikat Halal - Filter by Nama PU dan No Pengajuan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bbdbbd15-e26d-49b7-a9f4-0d6958648e5f</testCaseGuid>
+</TestCaseEntity>

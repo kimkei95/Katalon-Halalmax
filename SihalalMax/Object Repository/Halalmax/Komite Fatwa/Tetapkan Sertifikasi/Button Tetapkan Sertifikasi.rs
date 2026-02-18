@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type=&quot;button&quot;])[5]</value>
+         <value>//button[normalize-space()='Tetapkan Sertifikasi']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

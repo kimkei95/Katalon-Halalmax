@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PendampingHalal e2e - Kirim Verval Lebih Dari 1</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>02a62587-4ba0-4413-9dc9-bb0ed1421f59</testCaseGuid>
+</TestCaseEntity>

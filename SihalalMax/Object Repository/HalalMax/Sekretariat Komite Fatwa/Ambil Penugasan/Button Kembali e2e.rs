@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Button (YA) Tetapkan Sertifikasi</name>
+   <name>Button Kembali e2e</name>
    <tag></tag>
-   <elementGuidId>87ace65d-c791-4ce4-bdab-08449f55ce9e</elementGuidId>
+   <elementGuidId>0fa34640-16df-4f4b-8ff7-96ab0fb986cf</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[normalize-space()='Iya']</value>
+         <value>//button[.//p[normalize-space()='Kembali']]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

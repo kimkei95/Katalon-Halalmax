@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sekre KF e2e - Kirim Pengajuan Ke KF</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8a647465-3c71-420b-bc3b-49fdfbc85954</testCaseGuid>
+</TestCaseEntity>
