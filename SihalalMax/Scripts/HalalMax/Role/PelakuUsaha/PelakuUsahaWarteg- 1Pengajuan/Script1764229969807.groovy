@@ -16,11 +16,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
-import org.openqa.selenium.WebElement as WebElement
-import java.util.Arrays as Arrays
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import org.openqa.selenium.WebElement
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil
+import java.util.Arrays
+
 
 // --- Mulai Skenario ---
 // 1. Tentukan Test Object
@@ -44,11 +44,11 @@ WebUI.click(findTestObject('HalalMax/Login/Masuk'))
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('HalalMax/Login/FieldEmail'), 'muhammadakmalalhaqi91@gmail.com')
+WebUI.setText(findTestObject('HalalMax/Login/FieldEmail'), 'xjnhtwza@sharklasers.com')
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('HalalMax/Login/Fieldpassword'), '123456')
+WebUI.setText(findTestObject('HalalMax/Login/Fieldpassword'), 'P@ssword!1')
 
 WebUI.delay(3)
 
@@ -76,7 +76,11 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/KlikDropdownKBLI'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/pilihanKedaiMakanan'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/pilihanKedaiMinuman'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/PengajuanFasilitator'))
 
 WebUI.delay(3)
 
@@ -84,11 +88,11 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/BtnKirim'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/DropdownJenisKbli'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/PilihJenisProduk'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/PilihJenisKBLI'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/MemilihJenisProduk'))
 
 WebUI.delay(3)
 
@@ -127,88 +131,79 @@ WebUI.delay(3)
 // =========================
 //  HAPUS KATA "GARAM"
 // =========================
-// Ambil field
-TestObject howToCookField = findTestObject('HalalMax/FIELD')
 
+TestObject howToCookField = findTestObject('HalalMax/FIELD')
 String wordToDelete = 'garam'
 
-// Pastikan field tersedia
-WebUI.verifyElementPresent(howToCookField, 10)
+// Tunggu field muncul
+WebUI.waitForElementVisible(howToCookField, 15)
 
-// Ambil teks awal
-String initialText = WebUI.getText(howToCookField)
+// Ambil element asli (lebih stabil untuk contenteditable)
+WebElement howToCookElement = WebUiCommonHelper.findWebElement(howToCookField, 20)
 
-if (!(initialText.contains(wordToDelete))) {
-	KeywordUtil.logInfo("Kata '$wordToDelete' tidak ditemukan, langsung klik lanjutkan.")
+// Ambil text via JS (lebih akurat untuk div / React)
+String initialText = WebUI.executeJavaScript(
+	"return arguments[0].innerText;",
+	Arrays.asList(howToCookElement)
+)
 
-	WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton'), 20)
+KeywordUtil.logInfo("Teks awal: " + initialText)
 
-	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton'))
-
-	return null
+// Jika field kosong, tetap lanjut
+if (initialText == null || initialText.trim().isEmpty()) {
+	KeywordUtil.logInfo("Field kosong. Lanjut tanpa modifikasi.")
 }
+else if (!initialText.toLowerCase().contains(wordToDelete)) {
+	KeywordUtil.logInfo("Kata '$wordToDelete' tidak ditemukan. Lanjut tanpa modifikasi.")
+}
+else {
 
-KeywordUtil.logInfo('Teks Awal: ' + initialText)
+	KeywordUtil.logInfo("Kata ditemukan. Menghapus...")
 
-// Javascript untuk hapus kata
-String jsScript = '\n    var el = arguments[0];\n    var w = arguments[1];\n\n    // Hapus semua kemunculan kata\n    var r = new RegExp(w, "g");\n    el.innerHTML = el.innerHTML.replace(r, "");\n\n    return el.innerHTML;\n'
+	String jsScript = """
+        var el = arguments[0];
+        var word = arguments[1];
+        var regex = new RegExp(word, 'gi');
+        el.innerHTML = el.innerHTML.replace(regex, '');
+        return el.innerText;
+    """
 
-// Eksekusi JS
-WebElement howToCookElement = WebUiCommonHelper.findWebElement(howToCookField, 30)
-
-String modifiedContent = WebUI.executeJavaScript(jsScript, Arrays.asList(howToCookElement, wordToDelete))
-
-KeywordUtil.logInfo('Teks Setelah Modifikasi: ' + modifiedContent)
-
-// =========================
-//  TRIGGER REACT STATE UPDATE
-// =========================
-// Trigger input & change supaya React sadar teks berubah
-WebUI.executeJavaScript('\n    var el = arguments[0];\n    el.dispatchEvent(new Event(\'input\', { bubbles: true }));\n    el.dispatchEvent(new Event(\'change\', { bubbles: true }));\n',
-	Arrays.asList(howToCookElement))
-
-WebUI.delay(1 // kecil saja cukup
+	String modifiedContent = WebUI.executeJavaScript(
+		jsScript,
+		Arrays.asList(howToCookElement, wordToDelete)
 	)
 
-// =========================
-//  EXTRA FALLBACK (kadang wajib di Next.js)
-// =========================
-WebUI.click(howToCookField)
+	KeywordUtil.logInfo("Teks setelah modifikasi: " + modifiedContent)
 
-WebUI.delay(1)
+	// Trigger React update
+	WebUI.executeJavaScript("""
+        var el = arguments[0];
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+    """, Arrays.asList(howToCookElement))
+
+	WebUI.delay(1)
+}
 
 // =========================
 //  TUNGGU TOMBOL ENABLE
 // =========================
+
 TestObject btnLanjut = findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton')
 
-int timeoutSeconds = 20
-boolean clicked = false
+// Tunggu sampai clickable
+WebUI.waitForElementClickable(btnLanjut, 20)
 
-for (int i = 0; i < timeoutSeconds; i++) {
+// Klik
+WebUI.click(btnLanjut)
 
-	// cek apakah tombol sudah enable
-	if (WebUI.verifyElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton'), FailureHandling.OPTIONAL)) {
-
-		KeywordUtil.logInfo("Tombol Lanjutkan sudah enable di detik ke-${i}, melakukan klik.")
-		WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton'))
-		clicked = true
-		break
-	}
-
-	// jika belum enable, tunggu 1 detik
-	WebUI.delay(1)
-}
-if (!clicked) {
-	KeywordUtil.markFailed("Tombol Lanjutkan tidak pernah enable setelah ${timeoutSeconds} detik.")
-	return
-} else {
-	KeywordUtil.logInfo('Berhasil klik tombol Lanjutkan, melanjutkan ke step selanjutnya.')
-}
-
+KeywordUtil.logInfo("Berhasil klik tombol Lanjutkan")
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/KirimPengajuan'))
 
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/BtnYaKali'))
 WebUI.delay(3)
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox1'))
@@ -220,6 +215,10 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox2')
 WebUI.delay(3)
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox3'))
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox4'))
 
 WebUI.delay(3)
 
@@ -259,7 +258,7 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/F
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/FieldKodeFasilitator'), 'KODEFAS')
+WebUI.setText(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/FieldKodeFasilitator'), 'SEHATI26')
 
 WebUI.delay(3)
 

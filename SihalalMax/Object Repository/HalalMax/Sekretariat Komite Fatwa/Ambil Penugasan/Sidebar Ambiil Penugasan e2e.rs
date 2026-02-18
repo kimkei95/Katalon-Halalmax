@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>pilihanKedaiMakanan</name>
+   <name>Sidebar Ambiil Penugasan e2e</name>
    <tag></tag>
-   <elementGuidId>bca652d2-a54d-461e-80e7-1cb6e6380034</elementGuidId>
+   <elementGuidId>1ba593f7-0f3c-424a-a706-463e5687719d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//p[(text() = 'Kedai Makanan' or . = 'Kedai Makanan')]</value>
+         <value>//span[normalize-space()='Ambil Pengajuan']/parent::div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

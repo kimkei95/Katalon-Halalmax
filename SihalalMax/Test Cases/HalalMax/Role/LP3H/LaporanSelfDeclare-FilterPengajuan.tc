@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LaporanSelfDeclare-FilterPengajuan</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>358b1044-2148-42d2-a847-e95da4f8e4e9</testCaseGuid>
+</TestCaseEntity>
