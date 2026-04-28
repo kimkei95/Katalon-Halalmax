@@ -76,7 +76,7 @@ WebUI.click(findTestObject('HalalMax/PelakuUsaha/KlikDropdownKBLI'))
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('HalalMax/PelakuUsaha/pilihanKedaiMinuman'))
+WebUI.click(findTestObject('HalalMax/PelakuUsaha/pilihanKedaiMakanan'))
 
 WebUI.delay(3)
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>pilihanKedaiMinuman</name>
+   <name>pilihanKedaiMakanan</name>
    <tag></tag>
    <elementGuidId>bca652d2-a54d-461e-80e7-1cb6e6380034</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//p[(text() = 'Kedai Minuman' or . = 'Kedai Minuman')]</value>
+         <value>//p[(text() = 'Kedai Makanan' or . = 'Kedai Makanan')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

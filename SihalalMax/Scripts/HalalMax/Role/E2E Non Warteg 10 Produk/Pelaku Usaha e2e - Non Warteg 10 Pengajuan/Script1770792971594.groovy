@@ -16,10 +16,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
-import com.kms.katalon.core.util.KeywordUtil
-import java.util.Arrays
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import java.util.Arrays as Arrays
 
 // --- Mulai Skenario ---
 // 1. Tentukan Test Object
@@ -43,7 +43,7 @@ WebUI.click(findTestObject('HalalMax/Login/Masuk'))
 
 WebUI.delay(3)
 
-WebUI.setText(findTestObject('HalalMax/Login/FieldEmail'), 'xjnhtwza@sharklasers.com')
+WebUI.setText(findTestObject('HalalMax/Login/FieldEmail'), 'testingkibot@gmail.com')
 
 WebUI.delay(3)
 
@@ -110,141 +110,105 @@ WebUI.delay(3)
 // =========================
 // LIST PRODUK (DATA UJI)
 // =========================
+def daftarProduk = ['Bika Ambon', 'Jus Alpukat', 'Jus Sirsak', 'Jus Mangga', 'Bulgogi Sapi Sambal Matah', 'Jus Jambu', 'Jus Pepaya'
+    , 'Es Tangkuban Perahu', 'Bulgogi Sapi','Ayam Woku']
 
-def daftarProduk = [
-	"Nasi Goreng Kecombrang",
-	"Jus Alpukat",
-	"Jus Apel",
-	"Jus Mangga",
-	"Bulgogi Sapi Sambal Matah",
-	"Jus Jambu",
-	"Jus Pepaya",
-	"Es Tangkuban Perahu",
-	"Bulgogi Sapi",
-	"Ayam Bakar Bumbu Kacang"
-]
+def daftarFoto = ['C:\\Users\\akmal\\Downloads\\telor balado.jpg', 'C:\\Users\\akmal\\Downloads\\ayam_bumbu_kuning_tanpa_santan.jpg'
+    , 'C:\\Users\\akmal\\Downloads\\buat es jeruk.jpg', 'C:\\Users\\akmal\\Downloads\\CAPCAI.jpg', 'C:\\Users\\akmal\\Downloads\\es kopih.jpg']
 
-def daftarFoto = [
-	'C:\\Users\\akmal\\Downloads\\telor balado.jpg',
-	'C:\\Users\\akmal\\Downloads\\ayam_bumbu_kuning_tanpa_santan.jpg',
-	'C:\\Users\\akmal\\Downloads\\buat es jeruk.jpg',
-	'C:\\Users\\akmal\\Downloads\\CAPCAI.jpg',
-	'C:\\Users\\akmal\\Downloads\\es kopih.jpg'
-	]
+Random random = new Random()
 
-	Random random = new Random()
 // =========================
 // LOOP PRODUK
 // =========================
-
 for (String namaProduk : daftarProduk) {
+    KeywordUtil.logInfo("========== MEMBUAT PRODUK: $namaProduk ==========")
 
-	KeywordUtil.logInfo("========== MEMBUAT PRODUK: $namaProduk ==========")
+    WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'), 20)
 
-	WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'), 20)
-	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'))
+    WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'))
 
-	WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/Manual'), 20)
-	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Manual'))
+    WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/Manual'), 20)
 
-	// =========================
-	// INPUT NAMA PRODUK
-	// =========================
+    WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Manual'))
 
-	TestObject fieldNama = findTestObject('HalalMax/PelakuUsaha/Produk1/KlikFieldNamaProduk')
+    // =========================
+    // INPUT NAMA PRODUK
+    // =========================
+    TestObject fieldNama = findTestObject('HalalMax/PelakuUsaha/Produk1/KlikFieldNamaProduk')
 
-	WebUI.waitForElementVisible(fieldNama, 20)
-	WebUI.setText(fieldNama, namaProduk)
+    WebUI.waitForElementVisible(fieldNama, 20)
 
-	WebUI.delay(1) // tunggu dropdown suggestion muncul
+    WebUI.setText(fieldNama, namaProduk)
 
-	// =========================
-	// DYNAMIC CLICK REKOMENDASI
-	// =========================
+    WebUI.delay(1 // tunggu dropdown suggestion muncul
+        )
 
-	String dynamicXpath = "//div[contains(normalize-space(), '" + namaProduk + "')]"
+    // =========================
+    // DYNAMIC CLICK REKOMENDASI
+    // =========================
+    String dynamicXpath = ('//div[contains(normalize-space(), \'' + namaProduk) + '\')]'
 
-	TestObject rekomendasiProduk = new TestObject()
-	rekomendasiProduk.addProperty(
-		"xpath",
-		com.kms.katalon.core.testobject.ConditionType.EQUALS,
-		dynamicXpath
-	)
+    TestObject rekomendasiProduk = new TestObject()
 
-	WebUI.waitForElementClickable(rekomendasiProduk, 10)
-	WebUI.click(rekomendasiProduk)
+    rekomendasiProduk.addProperty('xpath', com.kms.katalon.core.testobject.ConditionType.EQUALS, dynamicXpath)
 
-	KeywordUtil.logInfo("Berhasil pilih rekomendasi: $namaProduk")
+    WebUI.waitForElementClickable(rekomendasiProduk, 10)
 
-	// =========================
-	// UPLOAD FOTO
-	// =========================
+    WebUI.click(rekomendasiProduk)
 
-	String fotoRandom = daftarFoto[random.nextInt(daftarFoto.size())]
-	
-	KeywordUtil.logInfo("Upload foto: " + fotoRandom)
-	
-	WebUI.uploadFile(
-		findTestObject('HalalMax/PelakuUsaha/Produk1/AddFotoProduk'),
-		fotoRandom
-	)
+    KeywordUtil.logInfo("Berhasil pilih rekomendasi: $namaProduk")
 
-	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Icon-Buang'))
+    // =========================
+    // UPLOAD FOTO
+    // =========================
+    String fotoRandom = daftarFoto[random.nextInt(daftarFoto.size())]
 
-	WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/GunakanAI'))
+    KeywordUtil.logInfo('Upload foto: ' + fotoRandom)
 
-	// =========================
-	// HAPUS KATA GARAM
-	// =========================
+    WebUI.uploadFile(findTestObject('HalalMax/PelakuUsaha/Produk1/AddFotoProduk'), fotoRandom)
 
-	TestObject howToCookField = findTestObject('HalalMax/FIELD')
-	WebUI.waitForElementVisible(howToCookField, 15)
+    WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Icon-Buang'))
 
-	WebElement howToCookElement = WebUiCommonHelper.findWebElement(howToCookField, 20)
+    WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/GunakanAI'))
 
-	String initialText = WebUI.executeJavaScript(
-		"return arguments[0].innerText;",
-		Arrays.asList(howToCookElement)
-	)
+    // =========================
+    // HAPUS KATA GARAM
+    // =========================
+    TestObject howToCookField = findTestObject('HalalMax/FIELD')
 
-	if (initialText != null && initialText.toLowerCase().contains('garam')) {
+    WebUI.waitForElementVisible(howToCookField, 15)
 
-		String jsScript = """
-			var el = arguments[0];
-			var regex = new RegExp('garam', 'gi');
-			el.innerHTML = el.innerHTML.replace(regex, '');
-			return el.innerText;
-		"""
+    WebElement howToCookElement = WebUiCommonHelper.findWebElement(howToCookField, 20)
 
-		WebUI.executeJavaScript(jsScript, Arrays.asList(howToCookElement))
+    String initialText = WebUI.executeJavaScript('return arguments[0].innerText;', Arrays.asList(howToCookElement))
 
-		WebUI.executeJavaScript("""
-			var el = arguments[0];
-			el.dispatchEvent(new Event('input', { bubbles: true }));
-			el.dispatchEvent(new Event('change', { bubbles: true }));
-		""", Arrays.asList(howToCookElement))
+    if ((initialText != null) && initialText.toLowerCase().contains('garam')) {
+        String jsScript = '\n\t\t\tvar el = arguments[0];\n\t\t\tvar regex = new RegExp(\'garam\', \'gi\');\n\t\t\tel.innerHTML = el.innerHTML.replace(regex, \'\');\n\t\t\treturn el.innerText;\n\t\t'
 
-		WebUI.delay(1)
-	}
+        WebUI.executeJavaScript(jsScript, Arrays.asList(howToCookElement))
 
-	// =========================
-	// KLIK LANJUT
-	// =========================
+        WebUI.executeJavaScript('\n\t\t\tvar el = arguments[0];\n\t\t\tel.dispatchEvent(new Event(\'input\', { bubbles: true }));\n\t\t\tel.dispatchEvent(new Event(\'change\', { bubbles: true }));\n\t\t', 
+            Arrays.asList(howToCookElement))
 
-	TestObject btnLanjut = findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton')
+        WebUI.delay(1)
+    }
+    
+    // =========================
+    // KLIK LANJUT
+    // =========================
+    TestObject btnLanjut = findTestObject('HalalMax/PelakuUsaha/Produk1/LanjutkanButton')
 
-	WebUI.waitForElementClickable(btnLanjut, 20)
-	WebUI.click(btnLanjut)
+    WebUI.waitForElementClickable(btnLanjut, 20)
 
-	KeywordUtil.logInfo("Produk '$namaProduk' berhasil dibuat")
+    WebUI.click(btnLanjut)
+
+    KeywordUtil.logInfo("Produk '$namaProduk' berhasil dibuat")
 }
-
-	
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/KirimPengajuan'))
 
 WebUI.delay(3)
-
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Modal-Ikrar/Checkbox1'))
 
@@ -300,25 +264,26 @@ WebUI.delay(3)
 
 WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Pilih-Jenis-Pengajuan/BtnKirim'))
 
-
 String currentUrl = WebUI.getUrl()
-println("Current URL: " + currentUrl)
 
-def matcher = (currentUrl =~ /sertifikasi\/(\d+)/)
+println('Current URL: ' + currentUrl)
+
+def matcher = currentUrl =~ 'sertifikasi/(\\d+)'
 
 if (matcher.find()) {
-	String idPengajuan = matcher.group(1)
-	println("ID ditemukan: " + idPengajuan)
-	
-	// SIMPAN KE GLOBAL
-	GlobalVariable.idPengajuan = idPengajuan
-	
-	println("ID disimpan ke GlobalVariable: " + GlobalVariable.idPengajuan)
-	
-} else {
-	KeywordUtil.markFailed("ID tidak ditemukan di URL")
-}
-WebUI.delay(5)
-WebUI.closeBrowser()
+    String idPengajuan = matcher.group(1)
 
+    println('ID ditemukan: ' + idPengajuan)
+
+    // SIMPAN KE GLOBAL
+    GlobalVariable.idPengajuan = idPengajuan
+
+    println('ID disimpan ke GlobalVariable: ' + GlobalVariable.idPengajuan)
+} else {
+    KeywordUtil.markFailed('ID tidak ditemukan di URL')
+}
+
+WebUI.delay(5)
+
+WebUI.closeBrowser()
 
