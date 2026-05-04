@@ -6,4 +6,30 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>d6ee2681-bb93-4d6d-845b-266a5279d0f3</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>39e2a85d-9727-422e-87a9-7be424b7a851</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>79b412aa-3319-49f0-af91-1bce64cde0c1</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>39e2a85d-9727-422e-87a9-7be424b7a851</id>
+      <masked>false</masked>
+      <name>Produk</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>79b412aa-3319-49f0-af91-1bce64cde0c1</id>
+      <masked>false</masked>
+      <name>Foto</name>
+   </variable>
 </TestCaseEntity>

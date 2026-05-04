@@ -17,6 +17,18 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/HalalMax/Role/E2E Warteg 30 Produk/Pelaku Usaha e2e - Warteg 30 Pengajuan</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>39e2a85d-9727-422e-87a9-7be424b7a851</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>79b412aa-3319-49f0-af91-1bce64cde0c1</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>c15a88be-19e0-4bbf-a3a2-e7e1a83e3161</guid>
