@@ -90,7 +90,7 @@ for (int i = 1; i <= data.getRowNumbers(); i++) {
 
     KeywordUtil.logInfo("========== MEMBUAT PRODUK: $namaProduk ==========")
 
-    // Klik tambah produk
+    // Klik tambah produk 
     WebUI.waitForElementClickable(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'), 20)
 
     WebUI.click(findTestObject('HalalMax/PelakuUsaha/Produk1/Tambah Produk'))
