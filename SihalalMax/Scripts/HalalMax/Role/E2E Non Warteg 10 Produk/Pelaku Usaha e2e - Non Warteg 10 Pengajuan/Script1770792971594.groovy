@@ -111,7 +111,7 @@ WebUI.delay(3)
 // LIST PRODUK (DATA UJI)
 // =========================
 def daftarProduk = ['Bika Ambon', 'Jus Alpukat', 'Jus Sirsak', 'Jus Mangga', 'Bulgogi Sapi Sambal Matah', 'Jus Jambu', 'Jus Pepaya'
-    , 'Es Tangkuban Perahu', 'Bulgogi Sapi','Ayam Woku']
+    , 'Es Tangkuban Perahu', 'Bulgogi Sapi', 'Ayam Woku']
 
 def daftarFoto = ['C:\\Users\\akmal\\Downloads\\telor balado.jpg', 'C:\\Users\\akmal\\Downloads\\ayam_bumbu_kuning_tanpa_santan.jpg'
     , 'C:\\Users\\akmal\\Downloads\\buat es jeruk.jpg', 'C:\\Users\\akmal\\Downloads\\CAPCAI.jpg', 'C:\\Users\\akmal\\Downloads\\es kopih.jpg']
@@ -284,6 +284,4 @@ if (matcher.find()) {
 }
 
 WebUI.delay(5)
-
-WebUI.closeBrowser()
 
